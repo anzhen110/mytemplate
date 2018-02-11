@@ -227,7 +227,9 @@ Page({
           url: path,
         })
       }else{
-        
+        wx.chooseInvoiceTitle({
+          
+        });
       }
     }
   },

@@ -34,7 +34,6 @@ page {
   flex-wrap: wrap;
   position: relative;
   margin: 4rpx;
-  z-index: 10;
 }
 
 .size3 {
