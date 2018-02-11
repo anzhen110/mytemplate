@@ -1,0 +1,128 @@
+page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.metro-layer {
+  z-index: 10;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: calc(100% - 8rpx);
+  padding: 4rpx;
+}
+
+.citie {
+  background: rgba(255, 255, 0, 0.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 4rpx;
+  z-index: 10;
+}
+
+.size3 {
+  width: calc(50% - 8rpx);
+  height: 180rpx;
+}
+
+.size2 {
+  width: calc(25% - 8rpx);
+  height: 180rpx;
+}
+
+.size1 {
+  width: calc(12.5% - 8rpx);
+  height: 90rpx;
+}
+
+.size3 .icons {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 50rpx;
+  align-items: center;
+  line-height: 80rpx;
+  font-size: 80rpx;
+}
+
+.size2 .icons {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 50rpx;
+  align-items: center;
+  line-height: 80rpx;
+  font-size: 80rpx;
+}
+
+.size1 .icons {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 25rpx;
+  align-items: center;
+  line-height: 40rpx;
+  font-size: 40rpx;
+}
+
+.title {
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  font-size: 20rpx;
+}
+
+.choose-size-btn, .unload-btn {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -25rpx;
+  bottom: -25rpx;
+  font-size: 28rpx;
+  font-weight: 100 !important;
+  background: rgba(255,255,255,0.8);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.unload-btn {
+  right: -25rpx;
+  top: -25rpx;
+}
+
+.changeSize {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.all-app{
+  z-index: 0;
+  color:#fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 28rpx;
+  width: calc(100% - 16rpx);
+  padding: 8rpx 8rpx 100rpx 8rpx;
+}
+.viewMore{
+  margin-right: 10rpx;
+}

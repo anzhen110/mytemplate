@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/setting/setting",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Demo",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#000000"
+  }
+}

@@ -1,0 +1,14 @@
+<image class="bg" src="/images/defaultbg.jpg" mode="aspeFill" bindtap="cancelChange">
+</image>
+<view class="metro-layer" bindtap="cancelChange">
+  <view class="citie {{change?'changeSize':''}} {{item.size == 1?'size1':item.size == 2?'size2':'size3'}}" catchlongpress="changeSize" wx:for="{{citieList}}" wx:key="{{index}}" data-index="{{index}}" data-url="{{item.url}}" catchtap="ontapCitie" style="" wx:if="{{item.display}}" catchtouchmove="{{item.change?'onMove':''}}">
+    <label class="icons {{item.icon}}"></label>
+    <text class="title" wx:if="{{item.size!=1}}">{{item.title}}</text>
+    <view wx:if="{{item.change}}" class="choose-size-btn {{item.size == 3?'icon-arrow-left2':item.size==2?(max?'icon-arrow-up-left2':'icon-arrow-down-right2'):'icon-arrow-down-right2'}}" catchtap="chooseSize" data-index="{{index}}"></view>
+    <view wx:if="{{item.change}}" class="unload-btn icon-pushpin" catchtap="unLoadCitie" data-index="{{index}}"></view>
+  </view>
+  <view class="all-app">
+    <view class="viewMore">所有应用</view>
+    <label class="icon-arrow-right2"></label>
+  </view>
+</view>
