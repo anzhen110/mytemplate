@@ -1,2 +1,97 @@
-<!--pages/setting/setting.wxml-->
-<text>设置</text>
+<view class="search-block">
+  <input placeholder="查找设置" placeholder-class="input-block" class="input-block" style=" {{isFocus?'border:4rpx solid rgb('+main_color+');background:#fff;':''}}" bindblur="onBlurFocus" bindfocus="onBlurFocus"></input>
+  <icon type="search" size="13" color="#666" />
+</view>
+<view class="setting-list">
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="icons icon-mobile2" style="color:rgb({{main_color}})"></view>
+    <view class="setting-name">
+      <view class="main-name">系统</view>
+      <view class="sub-name">显示、通知、电池</view>
+    </view>
+  </view>
+</view>

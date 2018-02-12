@@ -27,7 +27,7 @@ page {
 }
 
 .citie {
-  background: rgba(255, 255, 0, 0.5);
+  background: rgba(0, 0, 255, 0.5);
   display: flex;
   align-items: center;
   flex-direction: column;

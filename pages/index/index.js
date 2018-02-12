@@ -9,8 +9,9 @@ Page({
         max: false,
         icon: 'icon-steam2',
         title: 'Steam',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data:[]
       },
       {
         id: 2,
@@ -19,8 +20,9 @@ Page({
         max: true,
         icon: 'icon-edge',
         title: 'Microsoft Edge',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 3,
@@ -29,8 +31,9 @@ Page({
         max: false,
         icon: 'icon-twitter',
         title: 'Twitter',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 4,
@@ -39,8 +42,9 @@ Page({
         max: true,
         icon: 'icon-phone',
         title: '无SIM卡',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 5,
@@ -49,8 +53,9 @@ Page({
         max: false,
         icon: 'icon-camera',
         title: '相机',
-        url: 'camera',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 6,
@@ -59,8 +64,9 @@ Page({
         max: false,
         icon: 'icon-message',
         title: '消息',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 7,
@@ -70,7 +76,8 @@ Page({
         icon: 'icon-cog',
         title: '设置',
         url:'setting',
-        display: true
+        display: true,
+        data: []
       },
       {
         id: 8,
@@ -79,8 +86,9 @@ Page({
         max: false,
         icon: 'icon-map2',
         title: '地图',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 9,
@@ -89,8 +97,9 @@ Page({
         max: true,
         icon: 'icon-image',
         title: '相册',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 10,
@@ -99,8 +108,9 @@ Page({
         max: false,
         icon: 'icon-skype2',
         title: 'Skype',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 11,
@@ -109,8 +119,9 @@ Page({
         max: true,
         icon: 'icon-microsoftoutlook',
         title: 'Outlook',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 12,
@@ -119,8 +130,9 @@ Page({
         max: false,
         icon: 'icon-microsoftonenote',
         title: 'OneNote',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 13,
@@ -129,8 +141,9 @@ Page({
         max: false,
         icon: 'icon-microsoftexcel',
         title: 'Excel',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 14,
@@ -139,8 +152,9 @@ Page({
         max: false,
         icon: 'icon-microsoftpowerpoint',
         title: 'PowerPoint',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 15,
@@ -149,8 +163,9 @@ Page({
         max: false,
         icon: 'icon-microsoftword',
         title: 'Word',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 16,
@@ -159,8 +174,9 @@ Page({
         max: false,
         icon: 'icon-wechat',
         title: '微信',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 17,
@@ -169,8 +185,9 @@ Page({
         max: false,
         icon: 'icon-xbox',
         title: 'Xbox',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 18,
@@ -179,8 +196,9 @@ Page({
         max: false,
         icon: 'icon-newspaper',
         title: '资讯',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       },
       {
         id: 19,
@@ -189,14 +207,18 @@ Page({
         max: false,
         icon: 'icon-folder-open',
         title: '资源管理器',
-        url: 'setting',
-        display: true
+        url: '',
+        display: true,
+        data: []
       }
     ],
     change:false
   },
   onLoad: function () {
     
+  },
+  onShow:function(){
+    app.onPageShow();
   },
   changeSize:function(e){
     var citieList = this.data.citieList,
@@ -221,16 +243,10 @@ Page({
       })
     }else{
       var url = e.currentTarget.dataset.url;
-      if (url != 'camera'){
-        let path = '/pages/' + url + '/' + url;
-        wx.navigateTo({
-          url: path,
-        })
-      }else{
-        wx.chooseInvoiceTitle({
-          
-        });
-      }
+      let path = '/pages/' + url + '/' + url;
+      wx.navigateTo({
+        url: path,
+      })
     }
   },
   onMove:function(e){
