@@ -210,12 +210,34 @@ Page({
         url: '',
         display: true,
         data: []
+      },
+      {
+        id: 20,
+        size: 2,
+        change: false,
+        max: false,
+        icon: 'icon-cog',
+        title: '指纹设置',
+        url: 'zhiwen',
+        display: true,
+        data: []
       }
     ],
     change:false
   },
   onLoad: function () {
-    
+    var that = this;
+    wx.checkIsSupportSoterAuthentication({
+      success: function (res) {
+        that.setData({
+          supportMode: res.supportMode
+        })
+      }, fail: function (res) {
+        console.log('fail', res);
+      }, complete: function (res) {
+        console.log('complete', res);
+      }
+    })
   },
   onShow:function(){
     app.onPageShow();
@@ -243,10 +265,39 @@ Page({
       })
     }else{
       var url = e.currentTarget.dataset.url;
-      let path = '/pages/' + url + '/' + url;
-      wx.navigateTo({
-        url: path,
-      })
+      if(url == 'zhiwen'){
+        var checkAuthMode = this.data.supportMode;
+        if (!checkAuthMode){
+          wx.showToast({
+            title: '暂不支持生物识别',
+            icon:'none'
+          })
+          return;
+        }
+        wx.startSoterAuthentication({
+          requestAuthModes: ['fingerPrint', 'facial', 'speech'],
+          challenge: '123456',
+          authContent: '请用指纹解锁',
+          success(res) {
+            wx.showToast({
+              title: '验证成功！',
+              icon:'success'
+            })
+          },
+          fail:function(res){
+            wx.showToast({
+              title: '验证失败！',
+              icon: 'none'
+            })
+          }
+        })
+      }else{
+        let path = '/pages/' + url + '/' + url;
+        wx.navigateTo({
+          url: path,
+        })
+      }
+      
     }
   },
   onMove:function(e){

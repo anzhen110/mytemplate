@@ -1,5 +1,19 @@
 App({
   onLaunch: function () {
+    // wx.connectSocket({
+    //   url: 'wss://anzhen9.com:9501'
+    // });
+    // wx.onSocketOpen(function(){
+    //   wx.sendSocketMessage({
+    //     data: ['Hello','World'],
+    //     success:res=>{
+    //       console.log(res);
+    //     }
+    //   })
+    // });
+    // wx.onSocketMessage(function(res){
+    //   console.log(JSON.parse(res.data));
+    // })
     wx.setStorageSync('main_color', '255, 255, 0');//主题颜色，r,g,b形式存储
   },
   onPageShow:function(){
