@@ -1,5 +1,5 @@
 <view class="search-block">
-  <input placeholder="查找设置" placeholder-class="input-block" class="input-block" style=" {{isFocus?'border:4rpx solid rgb('+main_color+');background:#fff;':''}}" bindblur="onBlurFocus" bindfocus="onBlurFocus"></input>
+  <input placeholder="查找设置" placeholder-class="input-block" class="input-block" style=" {{isFocus?'border:4rpx solid rgb('+main_color+');background:#fff;':''}}" bindblur="onBlurFocus" bindfocus="onBlurFocus" bindinput="onInputSth"></input>
   <icon type="search" size="13" color="#666" />
 </view>
 <view class="setting-list">

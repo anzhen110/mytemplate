@@ -1,7 +1,9 @@
 const app = getApp();
 Page({
   data: {
-    isFocus:false
+    isFocus:false,
+    notEnough:false,
+
   },
   onLoad: function (options) {
     
@@ -14,5 +16,8 @@ Page({
     this.setData({
       isFocus: !this.data.isFocus
     })
+  },
+  onInputSth:function(e){
+    var val = e.detail.value;
   }
 })
